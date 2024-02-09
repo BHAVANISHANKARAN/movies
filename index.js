@@ -23,7 +23,7 @@ try {
 
 const app = express();
 app.use(express.json());
-const PORT = 4000;
+const PORT = process.env.PORT;
 
 // app.put("/movies/:id", async function (request, response) {
 //   // console.log(request.body);
