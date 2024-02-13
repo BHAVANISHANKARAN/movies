@@ -3,7 +3,7 @@ import express from "express";
 import { sequelize } from "./config.js";
 import { Movie } from "./models/movies.model.js";
 import { UserTable } from "./models/users.model.js";
-// import MovieRouter from "./Routes/movies.route.js";
+import MovieRouter from "./Routes/movies.route.js";
 import userRouter from "./Routes/users.route.js";
 import bcrypt from "bcrypt";
 import cors from "cors";
@@ -33,6 +33,6 @@ app.get("/", function (request, response) {
   response.send("🙋‍♂️, 🌏 🎊✨🤩");
 });
 
-app.use("/movies", userRouter);
+app.use("/movies", MovieRouter);
 
 app.listen(PORT, () => console.log(`The server started in: ${PORT} ✨✨`));
